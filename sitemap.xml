@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://www.stopzombieitis.com/</loc>
+        <lastmod>2025-06-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.stopzombieitis.com/img/title.png</image:loc>
+            <image:title>Stop Zombieitis - Sleep Deprivation Awareness Campaign</image:title>
+            <image:caption>Interactive educational experience about sleep deprivation awareness by the Better Sleep Council</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.stopzombieitis.com/img/doc-wide-1.png</image:loc>
+            <image:title>Dr. Howard U. Sleepen - Sleep Health Expert</image:title>
+            <image:caption>Dr. Howard U. Sleepen presenting information about sleep deprivation</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.stopzombieitis.com/img/symptoms-bg.png</image:loc>
+            <image:title>Sleep Deprivation Symptoms</image:title>
+            <image:caption>Visual guide to identifying symptoms of sleep deprivation (Zombieitis)</image:caption>
+        </image:image>
+    </url>
+</urlset>

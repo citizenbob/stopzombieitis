@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.stopzombieitis.com/sitemap.xml
+
+# Block access to certain file types
+Disallow: /*.php$
+Disallow: /mail.php
+
+# Allow access to CSS, JS, and images
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /snd/
+Allow: /soundmanager2/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

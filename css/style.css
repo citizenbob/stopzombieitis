@@ -209,26 +209,39 @@ input#report-email {
     background: transparent;
     border: none;
 }
-a.report-checkbox {
+a.report-checkbox,
+button.report-checkbox {
     position: absolute;
     left: 159px;
     display: block;
     width: 12px;
     height: 12px;
     background-color: #ffffcc;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
 }
-a.report-checked {
+a.report-checked,
+button.report-checked {
     background-color: #333;
 }
-a#report-accept { top: 355px; }
-a#report-enter { top: 393px; }
-a#report-form-submit {
+a#report-accept,
+button#report-accept { top: 355px; }
+a#report-enter,
+button#report-enter { top: 393px; }
+a#report-form-submit,
+button#report-form-submit {
     position: absolute;
     left: 158px;
     top: 440px;
     display: block;
     width: 186px;
     height: 58px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
 }
 p#report-form-thanks {
     position: absolute;
@@ -279,33 +292,53 @@ a#report-terms {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-a.diagnose-checkbox {
+a.diagnose-checkbox,
+button.diagnose-checkbox {
     position: absolute;
     left: 55px;
     display: block;
     width: 12px;
     height: 12px;
     background-color: #ffffcc;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
 }
-a.diagnose-checked {
+a.diagnose-checked,
+button.diagnose-checked {
     background-color: #333;
 }
-a#one { top: 185px; }
-a#two { top: 212px; }
-a#thr { top: 239px; }
-a#fou { top: 266px; }
-a#fiv { top: 293px; }
-a#six { top: 320px; }
-a#sev { top: 347px; }
-a#eig { top: 374px; }
-a#nin { top: 401px; }
-a#diagnose-submit {
+a#one,
+button#one { top: 185px; }
+a#two,
+button#two { top: 212px; }
+a#thr,
+button#thr { top: 239px; }
+a#fou,
+button#fou { top: 266px; }
+a#fiv,
+button#fiv { top: 293px; }
+a#six,
+button#six { top: 320px; }
+a#sev,
+button#sev { top: 347px; }
+a#eig,
+button#eig { top: 374px; }
+a#nin,
+button#nin { top: 401px; }
+a#diagnose-submit,
+button#diagnose-submit {
     position: absolute;
     left: 53px;
     top: 443px;
     display: block;
     width: 186px;
     height: 58px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
 }
 #frame div.caption-addthis {
     position: absolute;
@@ -355,13 +388,31 @@ a#cure-steps-report {
     position: absolute;
     top: -22px;
     height: 44px;
+    background: none;
+    border: none;
+    outline: none;
 }
-#ui a {
+#ui a,
+#ui button {
     position: absolute;
     top: 0;
     display: block;
     width: 44px;
     height: 44px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+#ui a:focus,
+#ui button:focus,
+#ui a:active,
+#ui button:active {
+    outline: none !important;
+    border: none !important;
 }
 #frame .ui-hover {
     position: absolute;
@@ -392,4 +443,76 @@ a#cure-steps-report {
 #luminosity {
     background-color: #000;
     opacity: 0.10;
+}
+
+/* Button reset to prevent browser defaults */
+button {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+button:focus,
+button:active {
+    outline: none;
+    border: none;
+}
+
+#ui-report,
+#ui-diagnose,
+#ui-cure,
+#ui-sound {
+    outline: none !important;
+    border: none !important;
+}
+
+#ui-report:focus,
+#ui-diagnose:focus,
+#ui-cure:focus,
+#ui-sound:focus,
+#ui-report:active,
+#ui-diagnose:active,
+#ui-cure:active,
+#ui-sound:active {
+    outline: none !important;
+    border: none !important;
+}
+
+/* Prevent fieldsets from showing focus outlines in forms */
+fieldset {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+/* Prevent forms from showing focus outlines */
+form {
+    outline: none;
+    border: none;
+}
+
+form:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+/* Specific form styling for report and diagnose forms */
+#report-form,
+#caption-diagnose fieldset {
+    outline: none !important;
+    border: none !important;
+}
+
+#report-form:focus,
+#caption-diagnose fieldset:focus {
+    outline: none !important;
+    border: none !important;
 }

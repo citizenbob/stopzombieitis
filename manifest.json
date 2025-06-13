@@ -1,0 +1,28 @@
+{
+    "name": "Stop Zombieitis - Sleep Deprivation Awareness",
+    "short_name": "Stop Zombieitis",
+    "description": "Interactive educational experience about sleep deprivation awareness by Dr. Howard U. Sleepen and the Better Sleep Council",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#333333",
+    "theme_color": "#333333",
+    "orientation": "landscape-primary",
+    "icons": [
+        {
+            "src": "img/title-poster.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["education", "health", "medical"],
+    "screenshots": [
+        {
+            "src": "img/title-poster.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Stop Zombieitis main screen"
+        }
+    ]
+}

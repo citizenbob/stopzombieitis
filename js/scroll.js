@@ -112,12 +112,12 @@ $(document).ready(function () {
 	return false;
     });
 
-    $('a.report-checkbox').click(function () {
+    $('a.report-checkbox, button.report-checkbox').click(function () {
 	$('#' + $(this).attr('rel')).val( $('#' + $(this).attr('rel')).val() == 'Yes' ? 'No' : 'Yes' );
         $(this).toggleClass('report-checked');
         return false;
     });
-    $('#report-form-submit').click(function () {
+    $('#report-form-submit, button#report-form-submit').click(function () {
         if ($.trim($('#report-form input#report-first_name').val()) == '' || $.trim($('#report-form input#report-last_name').val()) == '' || $.trim($('#report-form input#report-email').val()) == '') {
             $('#report-form-empty').show().delay(1000).fadeOut();
         } else if ( ! $('#report-accept').hasClass('report-checked') ) {
@@ -135,12 +135,12 @@ $(document).ready(function () {
         return false;
     });
 
-    $('a.diagnose-checkbox').click(function () {
+    $('a.diagnose-checkbox, button.diagnose-checkbox').click(function () {
         $(this).toggleClass('diagnose-checked');
         return false;
     });
-    $('a#diagnose-submit').click(function () {
-        checkedBoxes = $('a.diagnose-checked').length;
+    $('a#diagnose-submit, button#diagnose-submit').click(function () {
+        checkedBoxes = $('a.diagnose-checked, button.diagnose-checked').length;
         if (checkedBoxes < 3) {
             $('#background-diagnose .frame-content').css('background-image', 'url(img/diagnose-1.png)');
             captionFrame.frames[25].id = 'caption-diagnose-1';
