@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Stop Zombieitis!</title>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!--[if IE]>
+        <style type="text/css">
+        #luminosity {
+            filter: alpha(opacity=10);
+        }
+        p.frame-caption {
+            background-color: #000;
+            filter: alpha(opacity=90);
+        }
+        p.frame-caption-icon {
+            background-color: #000;
+            filter: alpha(opacity=90);
+        }
+        p#report-form-empty {
+            background-color: #000;
+            filter: alpha(opacity=90);
+        }
+        p#report-form-thanks {
+            background-color: #000;
+            filter: alpha(opacity=90);
+        }
+        a#report-terms {
+            background-color: #000;
+            filter: alpha(opacity=10);
+        }
+        a#cure-steps-guide {
+            background-color: #000;
+            filter: alpha(opacity=10);
+        }
+        a#cure-steps-bsc {
+            background-color: #000;
+            filter: alpha(opacity=10);
+        }
+        div.ui-hover {
+            background-color: #000;
+            filter: alpha(opacity=90);
+        }
+        </style>
+    <![endif]-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+
+    <script type="text/javascript" src="js/soundmanager2-nodebug-jsmin.js"></script>
+    <script>
+        soundManager.url = 'soundmanager2/';
+        soundManager.flashVersion = 9; // optional: shiny features (default = 8)
+        soundManager.useFlashBlock = false; // optionally, enable when you're ready to dive in
+        soundManager.onready(function() {
+            var super8 = soundManager.createSound({
+                id:'super8',
+                url:'snd/super8.mp3',
+                volume: 20,
+                loops: 1000,
+                autoLoad:true,
+                onload:function() {
+		    this.mute();
+                    this.play();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="scroll"></div>
+    <div id="container">
+        <div id="frame">
+            <div id="backgrounds">
+                <div id="background-title">
+                    <div class="frame-content" style="background: transparent url(img/title.png) center no-repeat;"></div>
+                </div>
+                <div id="background-slate-1" style="display: none;">
+                    <div class="frame-content" style="background: #333 url(img/slate-1.png) center no-repeat;"></div>
+                </div>
+                <div id="background-slate-2" style="display: none;">
+                    <div class="frame-content" style="background: #333 url(img/slate-2.png) center no-repeat;"></div>
+                </div>
+                <div id="background-slate-3" style="display: none;">
+                    <div class="frame-content" style="background: #333 url(img/slate-3.png) center no-repeat;"></div>
+                </div>
+                <div id="background-slate-4" style="display: none;">
+                    <div class="frame-content" style="background: #333 url(img/slate-4.png) center no-repeat;"></div>
+                </div>
+                <div id="background-wide-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-wide-1.png) center no-repeat;"></div>
+                </div>
+                <div id="background-wide-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-wide-2.png) center no-repeat;"></div>
+                </div>
+                <div id="background-wide-3" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-wide-3.png) center no-repeat;"></div>
+                </div>
+                <div id="background-wide-4" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-wide-4.png) center no-repeat;"></div>
+                </div>
+                <div id="background-close-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-close-1.png) center no-repeat;"></div>
+                </div>
+                <div id="background-close-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-close-2.png) center no-repeat;"></div>
+                </div>
+                <div id="background-close-3" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-close-3.png) center no-repeat;"></div>
+                </div>
+                <div id="background-close-4" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/lab-close-4.png) center no-repeat;"></div>
+                </div>
+                <div id="background-traffic_stop" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/traffic_stop.jpg) center no-repeat;"></div>
+                </div>
+                <div id="background-epidemic-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/epidemic-1.png) center no-repeat;"></div>
+                </div>
+                <div id="background-epidemic-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/epidemic-2.png) center no-repeat;"></div>
+                </div>
+                <div id="background-epidemic-3" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/epidemic-3.png) center no-repeat;"></div>
+                </div>
+                <div id="background-epidemic-4" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/epidemic-4.png) center no-repeat;"></div>
+                </div>
+                <div id="background-super_close-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-super_close-1.jpg) center no-repeat;"></div>
+                </div>
+                <div id="background-super_close-blank" style="display: none;">
+                    <div class="frame-content" style="background-color: #333;"></div>
+                </div>
+                <div id="background-super_close-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-super_close-2.jpg) center no-repeat;"></div>
+                </div>
+                <div id="background-symptoms" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-bg.png) center no-repeat;"></div>
+                </div>
+                <div id="background-cure-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/cure-1.png) center no-repeat;"></div>
+                </div>
+                <div id="background-cure-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/cure-2.png) center no-repeat;"></div>
+                </div>
+                <div id="background-cure-3" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/cure-3.png) center no-repeat;"></div>
+                </div>
+                <div id="background-cure-4" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/cure-4.png) center no-repeat;"></div>
+                </div>
+                <div id="background-report" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/report.png) center no-repeat;"></div>
+                </div>
+                <div id="background-diagnose" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/diagnose.png) center no-repeat;"></div>
+                </div>
+                <div id="background-cure-steps" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/cure-steps.png) center no-repeat;"></div>
+                </div>
+            </div>
+            <div id="foregrounds">
+                <div id="foreground-doc-wide-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-wide-1.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-doc-wide-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-wide-2.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-doc-close-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-close-1.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-doc-close-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-close-2.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-doc-pointing-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-pointing-1.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-doc-pointing-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/doc-pointing-2.png) center bottom no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-1" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-1.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-2" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-2.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-3" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-3.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-4" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-4.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-5" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-5.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-6" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-6.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-7" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-7.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-8" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-8.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-9" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-9.png) 384px center no-repeat;"></div>
+                </div>
+                <div id="foreground-symptoms-10" style="display: none;">
+                    <div class="frame-content" style="background: transparent url(img/symptoms-10.png) 384px center no-repeat;"></div>
+                </div>
+            </div>
+            <div id="filters">
+                <div id="grains">
+                    <div id="line1" style="left: 40px; width: 2px; background: transparent url(img/grain1.png) center no-repeat;"></div>
+                    <div id="line2" style="left: 880px; width: 5px; background: transparent url(img/grain2.png) center no-repeat;"></div>
+                </div>
+                <div id="luminosity"></div>
+            </div>
+            <div id="frame-foreground"></div>
+            <div id="captions">
+                <div id="caption-scroll">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.facebook.com/StopZombieitis" id="title-facebook"><img src="img/facebook.png" alt="Facebook" /></a>
+                        <a target="_blank" href="http://twitter.com/StopZombieitis" id="title-twitter"><img src="img/twitter.png" alt="Twitter" /></a>
+                        <a target="_blank" href="http://www.youtube.com/StopZombieitis" id="title-youtube"><img src="img/youtube.png" alt="YouTube" /></a>
+                    </div>
+                </div>
+                <div id="caption-welcome" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">Welcome. I'm Dr. Howard U. Sleepen with the <a target="_blank" href="http://www.bettersleep.org">Better Sleep Council</a> and this is your orientation film on the Zombieitis epidemic.</p>
+                    </div>
+                </div>
+                <div id="caption-intro" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">Zombieitis is a real epidemic.</p>
+                    </div>
+                </div>
+                <div id="caption-traffic_stop-1" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">Policemen are seeing increasing signs of Zombieitis in drivers.</p>
+                    </div>
+                </div>
+                <div id="caption-traffic_stop-2" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption-icon"><span><a href="#" id="traffic-icon"><img src="img/traffic-icon.png" alt="Observe other symptoms" /></a></span><a target="_blank" href="http://bettersleep.org/onbettersleep/sleep_work.asp">Zombieitis causes symptoms similar to those of alcohol impairment.</a></p>
+                    </div>
+                </div>
+                <div id="caption-traffic_stop-3" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption-image"><a href="#" id="traffic-report"><img src="img/traffic-report.png" alt="Report a Sighting" /></a></p>
+                    </div>
+                </div>
+                <div id="caption-epidemic" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption"><a target="_blank" href="http://bettersleep.org/onbettersleep/sleep_health.asp">This epidemic is infecting the public at rapid speed.</a></p>
+                    </div>
+                </div>
+                <div id="caption-super_close" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">Found in virtually every demographic and geographic population, Zombieitis can affect friends, family members and even your children.</p>
+                    </div>
+                </div>
+                <div id="caption-in_a_moment" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">In a moment you'll be given a simple set of instructions on how you can join the cause to Stop Zombieitis.</p>
+                    </div>
+                </div>
+                <div id="caption-but_first" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption">But first, let me explain the symptoms of Zombieitis.</p>
+                    </div>
+                </div>
+                <div id="caption-symptoms-links-1" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                    </div>
+                </div>
+                <div id="caption-symptoms-links-2" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_health.asp" class="symptoms-bags symptoms-link"></a>
+                    </div>
+                </div>
+                <div id="caption-symptoms-links-3" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_health.asp" class="symptoms-bags symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_work.asp" class="symptoms-decreased symptoms-link"></a>
+                    </div>
+                </div>
+                <div id="caption-symptoms-links-4" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_health.asp" class="symptoms-bags symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_work.asp" class="symptoms-decreased symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/sleep-physical-performance.asp" class="symptoms-blood symptoms-link"></a>
+                    </div>
+                </div>
+                <div id="caption-symptoms-links-5" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_health.asp" class="symptoms-bags symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_work.asp" class="symptoms-decreased symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/sleep-physical-performance.asp" class="symptoms-blood symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/sleeprelationships/index.asp" class="symptoms-relationships symptoms-link"></a>
+                    </div>
+                </div>
+                <div id="caption-symptoms" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/stress_sleep.asp" class="symptoms-irritability symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_health.asp" class="symptoms-bags symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/OnBetterSleep/sleep_work.asp" class="symptoms-decreased symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/sleep-physical-performance.asp" class="symptoms-blood symptoms-link"></a>
+                        <a target="_blank" href="http://www.bettersleep.org/sleeprelationships/index.asp" class="symptoms-relationships symptoms-link"></a>
+                        <p class="frame-caption">If you or someone you know exhibits these symptoms, please immediately report them to the <a target="_blank" href="http://www.bettersleep.org">Better Sleep Council</a>, where they can learn more about the <a target="_blank" href="http://bettersleep.org/onbettersleep/download_guide.asp">cure</a>.</p>
+                    </div>
+                </div>
+                <div id="caption-cure_research" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption-icon"><span style="margin-bottom: 24px"><a target="_blank" href="http://bettersleep.org/OnBetterSleep/sleep_health.asp" id="review_research-icon"><img src="img/review_research-icon.png" alt="Review the research" /></a></span>Research conducted by partners of the <a target="_blank" href="http://www.bettersleep.org">Better Sleep Council</a> has led to a tremendous breakthrough in combating the epidemic.</p>
+                    </div>
+                </div>
+                <div id="caption-cure_link" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" href="http://bettersleep.org/onbettersleep/download_guide.asp" id="cure-link"></a>
+                    </div>
+                </div>
+                <div id="caption-call_to_action" style="display: none;">
+                    <div class="frame-content">
+                        <p class="frame-caption-icon"><span><a target="_blank" href="http://www.facebook.com/StopZombieitis" id="stop_zombieitis-icon"><img src="img/stop_zombieitis-icon.png" alt="Stop Zombieitis" /></a></span>Now that you are prepared to identify and cure the epidemic, <a target="_blank" href="http://www.facebook.com/StopZombieitis">join the battle to Stop Zombieitis!</a></p>
+                    </div>
+                </div>
+                <div id="caption-slate-4" style="display: none;">
+                    <div class="frame-content">
+                        <a href="#" id="slate-4-report"></a>
+                        <a href="#" id="slate-4-diagnose"></a>
+                        <a href="#" id="slate-4-cure"></a>
+                    </div>
+                </div>
+                <div id="caption-report" style="display: none;">
+                    <div class="frame-content">
+                        <form id="report-form" action="mail.php" method="post">
+                            <input type="text" id="report-first_name" name="first_name" />
+                            <input type="text" id="report-last_name" name="last_name" />
+                            <input type="text" id="report-email" name="email" />
+                            <input type="hidden" id="terms_accepted" name="terms_accepted" value="No" />
+                            <input type="hidden" id="sweepstakes" name="sweepstakes" value="Yes" />
+                        </form>
+			<a id="report-terms" target="_blank" href="http://bettersleep.org/contest-rules.asp"></a>
+			<a href="#" rel="terms_accepted" class="report-checkbox" id="report-accept"></a>
+			<a href="#" rel="sweepstakes" class="report-checkbox report-checked" id="report-enter"></a>
+                        <a href="#" id="report-form-submit"><img src="img/report-submit.png" alt="Submit" /></a>
+                        <p id="report-form-empty">Please fill out all fields before submitting.</p>
+                        <p id="report-form-not-accepted">You must accept the offical rules, terms and conditions.</p>
+                        <p id="report-form-thanks">Thank you for the report.</p>
+                    </div>
+                </div>
+                <div id="caption-diagnose" style="display: none;">
+                    <div class="frame-content">
+                        <a href="#" class="diagnose-checkbox" id="one"></a>
+                        <a href="#" class="diagnose-checkbox" id="two"></a>
+                        <a href="#" class="diagnose-checkbox" id="thr"></a>
+                        <a href="#" class="diagnose-checkbox" id="fou"></a>
+                        <a href="#" class="diagnose-checkbox" id="fiv"></a>
+                        <a href="#" class="diagnose-checkbox" id="six"></a>
+                        <a href="#" class="diagnose-checkbox" id="sev"></a>
+                        <a href="#" class="diagnose-checkbox" id="eig"></a>
+                        <a href="#" class="diagnose-checkbox" id="nin"></a>
+                        <a href="#" id="diagnose-submit"><img src="img/diagnose-submit.png" alt="Submit" /></a>
+                    </div>
+                </div>
+                <div id="caption-diagnose-1" style="display: none;">
+                    <div class="frame-content">
+                        <div class="caption-addthis">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style " addthis:url="http://www.stopzombieitis.com/" addthis:title="Good news! I am not yet suffering from Zombieitis. @StopZombieitis">
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_preferred_1"></a>
+                                    <a class="addthis_button_preferred_2"></a>
+                                    <a class="addthis_button_compact"></a>
+                                    <a class="addthis_counter addthis_bubble_style"></a>
+                                </div>
+                            </div>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                </div>
+                <div id="caption-diagnose-2" style="display: none;">
+                    <div class="frame-content">
+                        <div class="caption-addthis">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style " addthis:url="http://www.stopzombieitis.com/" addthis:title="Uh oh! I am exhibiting some symptoms of Zombieitis. @StopZombieitis">
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_preferred_1"></a>
+                                    <a class="addthis_button_preferred_2"></a>
+                                    <a class="addthis_button_compact"></a>
+                                    <a class="addthis_counter addthis_bubble_style"></a>
+                                </div>
+                            </div>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                </div>
+                <div id="caption-diagnose-3" style="display: none;">
+                    <div class="frame-content">
+                        <div class="caption-addthis">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style " addthis:url="http://www.stopzombieitis.com/" addthis:title="Be warned! I may be suffering from Zombieitis. @StopZombieitis">
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_preferred_1"></a>
+                                    <a class="addthis_button_preferred_2"></a>
+                                    <a class="addthis_button_compact"></a>
+                                    <a class="addthis_counter addthis_bubble_style"></a>
+                                </div>
+                            </div>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                </div>
+                <div id="caption-diagnose-4" style="display: none;">
+                    <div class="frame-content">
+                        <div class="caption-addthis">
+                        </div>
+                    </div>
+                </div>
+                <div id="caption-cure-steps" style="display: none;">
+                    <div class="frame-content">
+                        <a target="_blank" id="cure-steps-guide" href="http://bettersleep.org/onbettersleep/download_guide.asp"></a>
+                        <a target="_blank" id="cure-steps-bsc" href="http://www.bettersleep.org"></a>
+                        <a href="#" id="cure-steps-report"><img src="img/cure-steps-report.png" alt="Submit" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="ui">
+                <div class="ui-hover" id="ui-hover-report" style="display: none;"><img src="img/ui-hover-report.png" alt="" /></div>
+                <div class="ui-hover" id="ui-hover-diagnose" style="display: none;"><img src="img/ui-hover-diagnose.png" alt="" /></div>
+                <div class="ui-hover" id="ui-hover-cure" style="display: none;"><img src="img/ui-hover-cure.png" alt="" /></div>
+                <a href="#" id="ui-report"></a>
+                <a href="#" id="ui-diagnose"></a>
+                <a href="#" id="ui-cure"></a>
+                <a href="#" id="ui-sound"></a>
+            </div>
+            <div id="scroll-reminder" style="position: absolute; left: 409px; top: 560px; width: 142px; height: 92px;"><img src="img/scroll.png" alt="Scroll Down" /></div>
+        </div>
+    </div>
+</body>
+
+</html>

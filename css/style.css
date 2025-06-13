@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+a img {
+    border: none;
+}
+
+#scroll {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 22000px;
+    z-index: -100;
+}
+
+#container {
+    position: fixed;
+    left: 50%;
+    top: 36px;
+    width: 960px;
+    height: 600px;
+    margin: 0 0 0 -480px;
+}
+#frame, #frame div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+p.frame-caption {
+    position: absolute;
+    left: 300px;
+    bottom: 36px;
+    width: 360px;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+p.frame-caption-icon {
+    position: absolute;
+    left: 230px;
+    bottom: 36px;
+    width: 500px;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+p.frame-caption-icon span {
+    float: right;
+    margin: 0 0 0 18px;
+}
+p.frame-caption-image {
+    position: absolute;
+    left: 282px;
+    bottom: 36px;
+    width: 360px;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+#title-facebook {
+   position: absolute;
+   left: 446px;
+   top: 248px;
+   display: block;
+}
+#title-twitter {
+   position: absolute;
+   left: 496px;
+   top: 248px;
+   display: block;
+}
+#title-youtube {
+   position: absolute;
+   left: 546px;
+   top: 248px;
+   display: block;
+}
+a.symptoms-link {
+    position: absolute;
+    display: block;
+}
+a.symptoms-decreased {
+    left: 690px;
+    top: 24px;
+    width: 240px;
+    height: 58px;
+}
+a.symptoms-bags {
+    left: 690px;
+    top: 112px;
+    width: 240px;
+    height: 24px;
+}
+a.symptoms-irritability {
+    left: 770px;
+    top: 158px;
+    width: 160px;
+    height: 24px;
+}
+a.symptoms-relationships {
+    left: 660px;
+    top: 216px;
+    width: 270px;
+    height: 58px;
+}
+a.symptoms-blood {
+    left: 686px;
+    top: 290px;
+    width: 244px;
+    height: 58px;
+}
+
+#cure-link {
+    position: absolute;
+    left: 36px;
+    top: 0;
+    display: block;
+    width: 260px;
+    height: 330px;
+}
+
+#slate-4-report {
+    position: absolute;
+    top: 130px;
+    left: 160px;
+    display: block;
+    width: 150px;
+    height: 200px;
+}
+#slate-4-diagnose {
+    position: absolute;
+    top: 130px;
+    left: 402px;
+    display: block;
+    width: 150px;
+    height: 200px;
+}
+#slate-4-cure {
+    position: absolute;
+    top: 130px;
+    left: 648px;
+    display: block;
+    width: 150px;
+    height: 200px;
+}
+
+input#report-first_name {
+    position: absolute;
+    top: 183px;
+    left: 157px;
+    width: 330px;
+    height: 16px;
+    padding: 12px 12px 11px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    background: transparent;
+    border: none;
+}
+input#report-last_name {
+    position: absolute;
+    top: 240px;
+    left: 157px;
+    width: 330px;
+    height: 16px;
+    padding: 12px 12px 11px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    background: transparent;
+    border: none;
+}
+input#report-email {
+    position: absolute;
+    top: 293px;
+    left: 157px;
+    width: 330px;
+    height: 16px;
+    padding: 12px 12px 11px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    background: transparent;
+    border: none;
+}
+a.report-checkbox {
+    position: absolute;
+    left: 159px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffcc;
+}
+a.report-checked {
+    background-color: #333;
+}
+a#report-accept { top: 355px; }
+a#report-enter { top: 393px; }
+a#report-form-submit {
+    position: absolute;
+    left: 158px;
+    top: 440px;
+    display: block;
+    width: 186px;
+    height: 58px;
+}
+p#report-form-thanks {
+    position: absolute;
+    top: 520px;
+    left: 158px;
+    display: none;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+p#report-form-empty {
+    position: absolute;
+    top: 520px;
+    left: 158px;
+    display: none;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+p#report-form-not-accepted {
+    position: absolute;
+    top: 520px;
+    left: 158px;
+    display: none;
+    padding: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+a#report-terms {
+    position: absolute;
+    left: 252px;
+    top: 350px;
+    display: block;
+    width: 234px;
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+a.diagnose-checkbox {
+    position: absolute;
+    left: 55px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffcc;
+}
+a.diagnose-checked {
+    background-color: #333;
+}
+a#one { top: 185px; }
+a#two { top: 212px; }
+a#thr { top: 239px; }
+a#fou { top: 266px; }
+a#fiv { top: 293px; }
+a#six { top: 320px; }
+a#sev { top: 347px; }
+a#eig { top: 374px; }
+a#nin { top: 401px; }
+a#diagnose-submit {
+    position: absolute;
+    left: 53px;
+    top: 443px;
+    display: block;
+    width: 186px;
+    height: 58px;
+}
+#frame div.caption-addthis {
+    position: absolute;
+    top: 190px;
+    left: 214px;
+}
+#frame div.caption-addthis div.atclear {
+    position: static;
+}
+
+a#cure-steps-guide {
+    position: absolute;
+    left: 336px;
+    top: 194px;
+    display: block;
+    width: 130px;
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+a#cure-steps-bsc {
+    position: absolute;
+    left: 150px;
+    top: 412px;
+    display: block;
+    width: 148px;
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+a#cure-steps-report {
+    position: absolute;
+    left: 102px;
+    top: 475px;
+    display: block;
+    width: 190px;
+    height: 58px;
+}
+
+#frame-foreground {
+    background: transparent url(../img/fg-frame.png) center no-repeat;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 962px;
+    height: 602px;
+}
+#frame #ui {
+    position: absolute;
+    top: -22px;
+    height: 44px;
+}
+#ui a {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+}
+#frame .ui-hover {
+    position: absolute;
+    top: 0;
+    left: 620px;
+    width: 120px;
+    height: 16px;
+    padding: 13px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#ui-report {
+    left: 750px;
+    background: transparent url(../img/ui-report.png) center no-repeat;
+}
+#ui-diagnose {
+    left: 800px;
+    background: transparent url(../img/ui-diagnose.png) center no-repeat;
+}
+#ui-cure {
+    left: 850px;
+    background: transparent url(../img/ui-cure.png) center no-repeat;
+}
+#ui-sound {
+    left: 900px;
+    background: transparent url(../img/ui-sound.png) center -45px no-repeat;
+}
+#luminosity {
+    background-color: #000;
+    opacity: 0.10;
+}
